@@ -19,8 +19,6 @@ weatherForm.addEventListener('submit', (event) => {
 			if (data.error) {
 				messageOne.textContent = data.error;
 			} else {
-				console.log(data.forecast);
-				console.log(data.location);
 				messageOne.textContent = data.location;
 				messageTwo.textContent = `Weather description ${data.forecast.weatherDescription}, temperature is at ${data.forecast.temperature} degrees and feels like ${data.forecast.feelsLike} degrees.`;
 			}
