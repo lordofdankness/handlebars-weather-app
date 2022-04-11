@@ -3,7 +3,7 @@ body {
 	font-family: 'Trebuchet MS';
 	max-width: fit-content;
 	margin: 0 auto;
-	padding: 0 16px;
+	padding: 0 17px;
 
 	display: flex;
 	flex-direction: column;
