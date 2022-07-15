@@ -1,7 +1,7 @@
 const request = require('postman-request');
 require('dotenv').config();
 
-const weatherStackApiKey = process.env[ 'weatherStackApiKey' ];
+const weatherStackApiKey = process.env['weatherStackApiKey'];
 
 const forrecast = async (latitude, longitude, callback) => {
 	const weatherStackURL = `http://api.weatherstack.com/current?access_key=${weatherStackApiKey}&query=${latitude},${longitude}&units=m`;
@@ -12,7 +12,7 @@ const forrecast = async (latitude, longitude, callback) => {
 			callback('Unable to find location.', undefined);
 		} else {
 			callback(undefined, {
-				weatherDescription: body.current.weather_descriptions[ 0 ],
+				weatherDescription: body.current.weather_descriptions[0],
 				temperature: body.current.temperature,
 				feelsLike: body.current.feelslike,
 			});
